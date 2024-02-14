@@ -1,13 +1,61 @@
 .marksfieldStyling {
-    margin-left: 200px;
-    padding-left: 90px;
-    padding-top: 10px;
+    margin-left: 101px;
+
+    padding: 5px 0px 5px 5px;
+}
+
+.marksfieldStyling2 {
+    margin-left: 108px;
+
+    padding: 5px 0px 5px 5px;
+}
+
+.marksfieldStyling3 {
+    margin-left: 98px;
+
+    padding: 5px 0px 5px 5px;
+}
+
+.marksfieldStyling4 {
+    margin-left: 95px;
+
+    padding: 5px 0px 5px 5px;
 }
 
 .Marksfieldheading {
-    padding-left: 200px;
+    padding-left: 100px;
+
 }
 
 .coursefieldStyling {
     padding: 5px 0px 5px;
+}
+
+.buttonrow {
+    padding-top: 200px;
+}
+
+.buttondiv {
+    text-align: center;
+    margin-top: 75px;
+}
+
+body {
+    background-color: chocolate;
+}
+
+.buttonstyling {
+    background-color: darkgreen;
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    font-size: 20px;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: skyblue;
+    color: black;
 }
