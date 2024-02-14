@@ -17,6 +17,8 @@ function midmarks($name)
     return $midmarks;
 }
 
+
+
 function finalmarks($name, $cr_hr)
 {
     $finalmarks = (int)$_POST[$name];

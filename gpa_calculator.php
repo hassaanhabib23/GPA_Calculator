@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<?php include "gpa_2.php" ?>
+<?php include "gpa_2.php"; 
+    session_start();
+?>
 <html lang="en">
 
 <head>
@@ -11,27 +13,28 @@
 
 <body>
     <?php
+   // $conn=new mysqli()
     $errors = array();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $valid = true;
         if (empty($_POST['subject1']) || empty($_POST['1_assignmentmarks']) || empty($_POST['1_quizmarks']) || empty($_POST['1_midmarks']) || empty($_POST['1_finalmarks'])) {
-            array_push($errors, "Empty fields in first row");
+            array_push($errors, "Empty fields subject 1");
             $valid = false;
         }
         if (empty($_POST['subject2']) || empty($_POST['2_assignmentmarks']) || empty($_POST['2_quizmarks']) || empty($_POST['2_midmarks']) || empty($_POST['2_finalmarks'])) {
-            array_push($errors, "Empty fields in Second row");
+            array_push($errors, "Empty fields in subject 2");
             $valid = false;
         }
         if (empty($_POST['subject3']) || empty($_POST['3_assignmentmarks']) || empty($_POST['3_quizmarks']) || empty($_POST['3_midmarks']) || empty($_POST['3_finalmarks'])) {
-            array_push($errors, "Empty fields in third row");
+            array_push($errors, "Empty fields in subject3");
             $valid = false;
         }
         if (empty($_POST['subject4']) || empty($_POST['4_assignmentmarks']) || empty($_POST['4_quizmarks']) || empty($_POST['4_midmarks']) || empty($_POST['4_finalmarks'])) {
-            array_push($errors, "Empty fields in fourth row");
+            array_push($errors, "Empty fields in subject 4");
             $valid = false;
         }
         if (empty($_POST['subject5']) || empty($_POST['5_assignmentmarks']) || empty($_POST['5_quizmarks']) || empty($_POST['5_midmarks']) || empty($_POST['5_finalmarks'])) {
-            array_push($errors, "Empty fields in fifth row");
+            array_push($errors, "Empty fields in subject 5");
             $valid = false;
         }
         if (!empty($_POST['subject1']) && !ctype_alpha($_POST['subject1'])) {
