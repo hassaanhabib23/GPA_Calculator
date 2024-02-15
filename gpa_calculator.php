@@ -128,6 +128,8 @@ session_start();
             $gpa = $totalgradePoint / $totalCr_hour;
             $data = "INSERT into student_detail (student_name,student_regno,student_gpa) VALUES('$name','$regno','$gpa')";
             $conn->close();
+            session_unset();
+            session_destroy()
         }
     }
     ?>
