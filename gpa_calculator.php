@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<?php include "gpa_2.php"; 
-    session_start();
+<?php include "gpa_2.php";
+session_start();
 ?>
 <html lang="en">
 
@@ -13,7 +13,9 @@
 
 <body>
     <?php
-   // $conn=new mysqli()
+    $name = $_SESSION['name'];
+    $regno = $_SESSION['regno'];
+    $conn = new mysqli("localhost", "root", "", "gpa_calculator");
     $errors = array();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $valid = true;
@@ -123,8 +125,9 @@
             }
             $totalgradePoint = $Gradepoint_course1 + $Gradepoint_course2 + $Gradepoint_course3 + $Gradepoint_course4 + $Gradepoint_course5;
             $totalCr_hour = $course1_CH + $course2_CH + $course3_CH + $course4_CH + $course5_CH;
-
             $gpa = $totalgradePoint / $totalCr_hour;
+            $data = "INSERT into student_detail (student_name,student_regno,student_gpa) VALUES('$name','$regno','$gpa')";
+            $conn->close();
         }
     }
     ?>

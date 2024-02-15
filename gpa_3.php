@@ -31,6 +31,7 @@
             session_start();
             $_SESSION['name'] = $name;
             $_SESSION['regno'] = $regno;
+            $_SESSION['time'] = time();
             header("Location:http://localhost/GPA_CALCULATOR/gpa_calculator.php");
         }
     }
