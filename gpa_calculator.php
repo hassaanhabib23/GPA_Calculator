@@ -129,7 +129,7 @@ session_start();
             $data = "INSERT into student_detail (student_name,student_regno,student_gpa) VALUES('$name','$regno','$gpa')";
             $conn->close();
             session_unset();
-            session_destroy()
+            session_destroy();
         }
     }
     ?>
